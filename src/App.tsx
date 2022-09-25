@@ -1,7 +1,15 @@
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components';
 
-import { defaultTheme } from './styles/themes/default'
+import { Header } from './components/Header/Header';
+
+import { defaultTheme } from './styles/themes/default';
+import { GlobalStyle } from './styles/global';
 
 export function App() {
-  return <ThemeProvider theme={defaultTheme}></ThemeProvider>
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <GlobalStyle />
+      <Header />
+    </ThemeProvider>
+  );
 }
