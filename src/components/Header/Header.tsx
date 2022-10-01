@@ -1,6 +1,6 @@
 import { ShoppingCart, MapPin } from 'phosphor-react';
 
-import { HeaderContainer, InfoContainer, CartButton } from './styles';
+import { HeaderContainer, InfoContainer, CartButton, Location } from './styles';
 import logoCoffeeDelivery from '../../assets/coffee-delivery-logo.svg';
 
 export function Header() {
@@ -14,11 +14,11 @@ export function Header() {
       />
 
       <InfoContainer>
-        <div>
+        <Location>
           <MapPin size={22} weight="fill" alt="Ícone de localização." />
 
           <span>Olinda, PE</span>
-        </div>
+        </Location>
 
         <CartButton title="Ir para o carrinho.">
           {CART_QUANTITY_MOCK ? <span>{CART_QUANTITY_MOCK}</span> : null}

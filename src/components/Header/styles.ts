@@ -1,35 +1,43 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-  width: 100%;
+  width: 90vw;
+  max-width: 70rem;
 
   display: flex;
   justify-content: space-between;
 
-  padding: 2rem 10rem;
+  margin: auto;
+  padding: 2rem 0;
 `;
 
 export const InfoContainer = styled.div`
   display: flex;
   gap: 0.75rem;
+`;
 
-  div {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
+export const Location = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 
-    padding: 0.5rem;
+  padding: 0.5rem;
 
-    background-color: ${(props) => props.theme['purple-light']};
+  background-color: ${(props) => props.theme['purple-light']};
+  color: ${(props) => props.theme['purple-dark']};
+
+  border-radius: 6px;
+
+  svg {
     color: ${(props) => props.theme.purple};
-
-    border-radius: 6px;
   }
 `;
 
 export const CartButton = styled.button`
   display: flex;
   align-items: center;
+
+  position: relative;
 
   padding: 0.5rem;
 
@@ -39,7 +47,7 @@ export const CartButton = styled.button`
   border: none;
   border-radius: 6px;
 
-  position: relative;
+  cursor: pointer;
 
   span {
     width: 1.25rem;
@@ -58,10 +66,10 @@ export const CartButton = styled.button`
     background-color: ${(props) => props.theme['yellow-dark']};
     color: ${(props) => props.theme.white};
 
-    border-radius: 50%;
-
     font-size: 0.75rem;
     font-weight: 700;
+
+    border-radius: 50%;
 
     transform: translateY(-50%) translateX(50%);
   }
