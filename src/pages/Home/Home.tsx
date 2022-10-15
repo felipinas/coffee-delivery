@@ -1,6 +1,10 @@
 import { useTheme } from 'styled-components';
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react';
 
+import { CoffeeCard } from '../../components/CoffeeCard/CoffeeCard';
+
+import { coffees } from '../../mock/coffees.mock';
+
 import {
   MainContainer,
   IntroContainer,
@@ -8,6 +12,8 @@ import {
   ItemsContainer,
   Item,
   ItemIcon,
+  CoffeeListTitle,
+  CoffeeList,
 } from './styles';
 import IntroImage from '../../assets/intro-image.svg';
 
@@ -70,6 +76,16 @@ export function Home() {
           alt="Copo de café com grãos e pó de café ao redor"
         />
       </IntroContainer>
+
+      <section>
+        <CoffeeListTitle>Nossos cafés</CoffeeListTitle>
+
+        <CoffeeList>
+          {coffees.map((coffee) => {
+            return <CoffeeCard key={coffee.id} coffee={coffee} />;
+          })}
+        </CoffeeList>
+      </section>
     </MainContainer>
   );
 }

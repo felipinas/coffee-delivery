@@ -9,6 +9,7 @@ export const MainContainer = styled.main`
   max-width: 1120px;
 
   margin: auto;
+  padding-bottom: 10rem;
 `;
 
 export const IntroContainer = styled.section`
@@ -64,4 +65,18 @@ export const ItemIcon = styled.div<ItemIconProps>`
 
   background-color: ${({ backgroundColor }) => backgroundColor};
   color: ${(props) => props.theme.white};
+`;
+
+export const CoffeeListTitle = styled.h2`
+  margin: 2rem 0 3rem;
+
+  font-weight: 800;
+  font-size: 2rem;
+  color: ${(props) => props.theme['base-subtitle']};
+`;
+
+export const CoffeeList = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem 2rem;
 `;
