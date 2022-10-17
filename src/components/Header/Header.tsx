@@ -1,4 +1,5 @@
 import { ShoppingCart, MapPin } from 'phosphor-react';
+import { Link } from 'react-router-dom';
 
 import { HeaderContainer, InfoContainer, CartButton, Location } from './styles';
 import logoCoffeeDelivery from '../../assets/coffee-delivery-logo.svg';
@@ -8,10 +9,12 @@ export function Header() {
 
   return (
     <HeaderContainer>
-      <img
-        src={logoCoffeeDelivery}
-        alt="Copo roxo de café com um foguete na embalagem do lado de um texto 'Coffee Delivery'."
-      />
+      <Link to="/">
+        <img
+          src={logoCoffeeDelivery}
+          alt="Copo roxo de café com um foguete na embalagem do lado de um texto 'Coffee Delivery'."
+        />
+      </Link>
 
       <InfoContainer>
         <Location>
@@ -20,7 +23,7 @@ export function Header() {
           <span>Olinda, PE</span>
         </Location>
 
-        <CartButton title="Ir para o carrinho.">
+        <CartButton to="/checkout" title="Ir para o carrinho.">
           {CART_QUANTITY_MOCK ? <span>{CART_QUANTITY_MOCK}</span> : null}
 
           <ShoppingCart size={22} weight="fill" />

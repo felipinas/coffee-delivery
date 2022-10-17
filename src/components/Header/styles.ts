@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const HeaderContainer = styled.header`
   width: 90vw;
@@ -33,7 +34,7 @@ export const Location = styled.div`
   }
 `;
 
-export const CartButton = styled.button`
+export const CartButton = styled(Link)`
   display: flex;
   align-items: center;
 
