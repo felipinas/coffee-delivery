@@ -14,32 +14,14 @@ import {
   Price,
 } from './styles';
 
-interface CoffeeData {
-  image: string;
-  tags: string[];
-  name: string;
-  description: string;
-  price: number;
-}
-
-interface CoffeeCardProps {
-  coffee: CoffeeData;
-}
+import { CoffeeCardProps } from './types';
+import { formatPrice } from '../../utils/formatters';
 
 export function CoffeeCard({ coffee }: CoffeeCardProps) {
   const theme = useTheme();
   const [quantity, setQuantity] = useState(1);
 
   const { image, tags, name, description, price } = coffee;
-
-  function formatPrice(price: number) {
-    const formatedPrice = price.toLocaleString('pt-br', {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
-
-    return formatedPrice;
-  }
 
   function handleUpdateQuantity(value: number) {
     const supposedNewQuantityValue = quantity + value;
