@@ -21,8 +21,6 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
   const theme = useTheme();
   const [quantity, setQuantity] = useState(1);
 
-  const { image, tags, name, description, price } = coffee;
-
   function handleUpdateQuantity(value: number) {
     const supposedNewQuantityValue = quantity + value;
     const newQuantityValue =
@@ -30,6 +28,8 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
 
     setQuantity(newQuantityValue);
   }
+
+  const { image, tags, name, description, price } = coffee;
 
   return (
     <CoffeeCardContainer>

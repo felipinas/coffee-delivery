@@ -66,7 +66,7 @@ export function Success() {
         </Infos>
       </InfosContainer>
 
-      <img src={SuccessIllustration} alt="" />
+      <img src={SuccessIllustration} alt="Entregador à caminho." />
     </Container>
   );
 }
